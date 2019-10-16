@@ -18,7 +18,7 @@ public class RemoteControlTest  {
 		StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
 		StereoOffCommand stereOffWithCD = new StereoOffCommand(stereo);
 		
-		CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
+		CeilingFanHighCommand ceilingFanOn = new CeilingFanHighCommand(ceilingFan);
 		CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 		
 		remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
