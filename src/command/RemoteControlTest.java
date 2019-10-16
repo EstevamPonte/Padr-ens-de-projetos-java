@@ -8,6 +8,7 @@ public class RemoteControlTest  {
 		Light livingRoomLight = new Light("Living Room");
 		Light kitchenLight = new Light("Kitchen");
 		Stereo stereo = new Stereo("Living Room");
+		CeilingFan ceilingFan = new CeilingFan("Living Room");
 		
 		LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
 		LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
@@ -17,9 +18,13 @@ public class RemoteControlTest  {
 		StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
 		StereoOffCommand stereOffWithCD = new StereoOffCommand(stereo);
 		
+		CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
+		CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
+		
 		remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
 		remoteControl.setCommand(1, kitchenLighttOn, kitchenLightOff);
 		remoteControl.setCommand(2, stereoOnWithCD, stereOffWithCD);
+		remoteControl.setCommand(3, ceilingFanOn, ceilingFanOff);
 		
 		System.out.println(remoteControl);
 		
@@ -29,6 +34,8 @@ public class RemoteControlTest  {
 		remoteControl.offButtonWasPushed(1);
 		remoteControl.onButtonWasPushed(2);
 		remoteControl.offButtonWasPushed(2);
+		remoteControl.onButtonWasPushed(3);
+		remoteControl.offButtonWasPushed(3);
 
 	}
 
